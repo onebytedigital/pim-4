@@ -25,6 +25,7 @@ int main(void) {
   SetConsoleOutputCP(65001);
 
   if(autenticar() == 0) {
+    printf("\nBem-vindo ao sistema!\n");
     inserir_paciente();
   }
 
@@ -132,7 +133,10 @@ int inserir_paciente(void) {
     fprintf(file,Paciente.comorbidade);
 
     fclose(file);
-    system("PAUSE");
+
+    printf("Paciente Cadastrado com sucesso!");
+
+    inserir_paciente();
   } else {
     if(*confirmar == 2) {
       printf("Tudo certo por aqui! Volte sempre!\n\n");
